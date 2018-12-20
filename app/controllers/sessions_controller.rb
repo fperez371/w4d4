@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
       flash.now[:errors] = ['You must activate your account first! Check your email']
       render :new 
     else 
-      login_user!(user)
+      login!(user)
       redirect_to root_url
     end
   end
